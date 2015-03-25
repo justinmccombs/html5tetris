@@ -1,5 +1,9 @@
 /** PAGE ELEMENTS **/
 
+@background-color: #000;
+@text-color: #bbb;
+@border-color: #999;
+
 .menuCell
 {
   background-color: #001d00;
@@ -14,9 +18,9 @@
   margin: 0 5;
   font-size: 15px;
   font-family: VT323;
-  color: #008000;
-  background-color: #000d00;
-  border: 1px solid #008000;
+  color: @border-color;
+  background-color: @background-color;
+  border: 1px solid @border-color;
   border-radius: 5px;
   padding: 5px;
   width: 140;
@@ -38,10 +42,10 @@
 {
   font-family: VT323;
   margin: 0 auto;
-  border: 1px solid #008000;
+  border: 1px solid @border-color;
   border-radius: 5px;
-  background-color: #000d00;
-  color: #008000;
+  background-color: @background-color;
+  color: @border-color;
   padding: 5px;
   width: 140px;
   font-size: 18px;
@@ -57,10 +61,10 @@
   font-family: VT323;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid #008000;
+  border: 1px solid @border-color;
   border-radius: 5px;
-  background-color: #000d00;
-  color: #008000;
+  background-color: @background-color;
+  color: @border-color;
   padding: 5px;
   width: 140px;
   font-size: 18px;
@@ -81,8 +85,8 @@ a.bareLink:visited
 
 .selectedMenuItem
 {
-  color: #000d00;
-  background-color: #008000;
+  color: @background-color;
+  background-color: @border-color;
 }
 
 .menuItem:hover
@@ -100,9 +104,9 @@ body
   margin: 5 5;
   font-size: 16px;
   font-family: VT323;
-  color: #008000;
-  background-color: #000d00;
-  border: 1px solid #008000;
+  color: @border-color;
+  background-color: @background-color;
+  border: 1px solid @border-color;
   border-radius: 5px;
   padding: 5px;
   width: 580;
@@ -110,7 +114,7 @@ body
 
 .contentCell
 {
-  background-color: #001d00;
+  background-color: @background-color;
   color: #c0c0c0;
   font-family: VT323;
   vertical-align: top;
@@ -160,13 +164,13 @@ body
   margin: 0 auto;
   text-align: center;
   border-collapse: collapse;
-  border: 1px solid #008000;
-  color: #008000;
-  background-color: #000d00;
+  border: 1px solid @border-color;
+  color: @border-color;
+  background-color: @background-color;
 }
 .controlsTable td
 {
-  border-color: #008000;
+  border-color: @border-color;
 }
 /* right side tower ad */
 .towerAd
@@ -180,7 +184,7 @@ body
 
 .gameCanvas
 {
-  border: 1px solid #008000;
+  border: 1px solid @border-color;
 }
 
 .resTitle
@@ -193,13 +197,13 @@ body
   margin: 0 auto;
   font-size: 26px;
   border-collapse: collapse;
-  border: 1px solid #008000;
-  color: #008000;
-  background-color: #000d00;
+  border: 1px solid @border-color;
+  color: @border-color;
+  background-color: @background-color;
 }
 .resultsTable td
 {
-  border: 1px solid #008000;
+  border: 1px solid @border-color;
   padding: 10px;
   width: 200px;
 }
@@ -209,13 +213,13 @@ body
   margin: 0 auto;
   font-size: 18px;
   border-collapse: collapse;
-  border: 1px solid #008000;
-  color: #008000;
-  background-color: #000d00;
+  border: 1px solid @border-color;
+  color: @border-color;
+  background-color: @background-color;
 }
 .highScoreTable td
 {
-  border: 1px solid #008000;
+  border: 1px solid @border-color;
   width: 200px;
 }
 .highScoreTableHeader
@@ -254,7 +258,7 @@ body
   font-size:20px;
   position: absolute;
   height: 0px; width: 200px;
-  color: #008800;
+  color: #bbb;
   line-height: 100%;
   z-index: 2;
 }
@@ -288,7 +292,8 @@ body
   font-family: VT323;
   font-size:20px;
   position: absolute;
-  color: #008800;
+  color: @text-color;
+  text-shadow: .1em .1em .1em black;
   line-height: 100%;
   z-index: 2;
   top: 60px; left: 195px;
