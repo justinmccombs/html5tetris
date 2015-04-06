@@ -60,6 +60,14 @@
 				<br/>
 				<b>Controls:</b><br/>
 				<table border="1" cellpadding="3" class="controlsTable">
+					<tr>
+						<td colspan="3">
+							<button id="upLevelButton">Up</button>
+						</td>
+						<td colspan="3">
+							<button id="downLevelButton">Down</button>
+						</td>
+					</tr>
 					<tr class="controlsTableHeader">
 						<td width="80">Move Block</td>
 						<td width="80">Soft Drop</td>
@@ -68,7 +76,6 @@
 						<td width="80">Hard Drop</td>
 						<td width="80">Pause</td>
 					</tr>
-
 					<tr>
 						<td><span id="shiftLeft">Left</span>, <span id="shiftRight">Right</span></td>
 						<td><span id="softDrop">Down</span></td>
