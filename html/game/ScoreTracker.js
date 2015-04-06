@@ -1,5 +1,5 @@
-function ScoreTracker(scoreOutput, linesOutput, levelOutput, tickerOutput) {
-    this.level = 1;
+function ScoreTracker(scoreOutput, linesOutput, levelOutput, tickerOutput, upLevelButton, downLevelButton, startLevel) {
+    this.level = startLevel;
     this.score = 0;
     this.linesRemaining = ScoreTracker.levelLines(this.level);
 
@@ -7,6 +7,9 @@ function ScoreTracker(scoreOutput, linesOutput, levelOutput, tickerOutput) {
     this.linesOutput = linesOutput;
     this.levelOutput = levelOutput;
     this.tickerOutput = tickerOutput;
+
+	this.upLevelButton = upLevelButton;
+	this.downLevelButton = downLevelButton;
     
     this.curCombo = -1;
     this.lastWasBonus = false;
@@ -17,7 +20,38 @@ function ScoreTracker(scoreOutput, linesOutput, levelOutput, tickerOutput) {
     this.outputScore();
     this.outputLines();
     this.outputLevel();
+
+	this.initButtons();
 }
+
+ScoreTracker.prototype.initButtons = function() {
+	var self = this;
+	this.upLevelButton.addEventListener('click', function() {
+		self.levelUp();
+	});
+
+	this.downLevelButton.addEventListener('click', function() {
+		self.levelDown();
+	});
+}
+
+ScoreTracker.prototype.setLevel = function(level) {
+	this.level = level;
+	window.gameGlobals.level = level;
+	this.outputLevel();
+}
+
+ScoreTracker.prototype.levelUp = function() {
+	this.setLevel(this.level + 1);
+
+}
+
+ScoreTracker.prototype.levelDown = function() {
+	if (this.level > 1) {
+		this.setLevel(this.level - 1);
+	}
+}
+
 
 ScoreTracker.levelLines = function (level) {
     return level*5;
@@ -123,7 +157,7 @@ ScoreTracker.prototype.updateScore = function(config) {
     this.linesRemaining -= linesCleared;    
     if (this.linesRemaining <= 0) {
 	if (this.level < 15) {
-	    this.level += 1;
+		this.setLevel(this.level + 1);
 	    this.linesRemaining = ScoreTracker.levelLines(this.level);
 	} else {
 	    this.isGameWon = true;

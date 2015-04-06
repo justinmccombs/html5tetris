@@ -204,7 +204,7 @@ window.onload = function () {
 var redirCode;
 
 function redirectToScore() {
-	window.location.reload();
+	window.location = 'index.php?level='+window.gameGlobals.level;
 }
 
 function sendScoreRequest(score) {

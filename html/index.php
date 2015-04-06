@@ -7,9 +7,13 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />
 
+	<script>
+		window.gameGlobals = {
+			level: <?= (empty($_GET['level'])) ? 1 : $_GET['level']; ?>
+		}
+	</script>
 
 	<script src="js/soundmanager/script/soundmanager2-jsmin.js"></script>
-
 	<script src="game/Sounds.js"></script>
 	<script src="js/cookie.js"></script>
 	<script src="game/gameControls.js"></script>
@@ -62,10 +66,10 @@
 				<table border="1" cellpadding="3" class="controlsTable">
 					<tr>
 						<td colspan="3">
-							<button id="upLevelButton">Up</button>
+							<button id="upLevelButton">Level Up</button>
 						</td>
 						<td colspan="3">
-							<button id="downLevelButton">Down</button>
+							<button id="downLevelButton">Level Down</button>
 						</td>
 					</tr>
 					<tr class="controlsTableHeader">

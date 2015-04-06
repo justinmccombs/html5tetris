@@ -13,11 +13,13 @@ function Game(inputMapping, autoRepeat, threshold) {
 	this.previewBlocks.push(new Block({blockX: -10, blockY: -10, preview: true}));
     }
 
+	this.upLevelButton = document.getElementById('upLevelButton');
+	this.downLevelButton = document.getElementById('downLevelButton');
     this.scoreOutput = new TtyBlock("scoreDiv", 3);
     this.linesOutput = new TtyBlock("linesDiv", 3);
     this.levelOutput = new TtyBlock("levelDiv", 3);
     this.tickerOutput = new TtyBlock("tickerDiv", 5);
-    this.scoreTracker = new ScoreTracker(this.scoreOutput, this.linesOutput, this.levelOutput, this.tickerOutput);
+    this.scoreTracker = new ScoreTracker(this.scoreOutput, this.linesOutput, this.levelOutput, this.tickerOutput, this.upLevelButton, this.downLevelButton, window.gameGlobals.level);
 
     this.dropPeriod = this.scoreTracker.getLevelPeriod();
     this.timeToNextDrop = this.dropPeriod;
