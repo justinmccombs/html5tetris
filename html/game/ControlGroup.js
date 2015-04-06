@@ -179,6 +179,8 @@ ControlGroup.prototype.turn = function(cw) {
 	}
     }
 
+    soundManager.play('blockRotated');
+
     this.updateBottomedState();
 
     return true;

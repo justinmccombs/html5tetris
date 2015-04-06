@@ -51,6 +51,9 @@ Game.prototype.removeRows = function (rows) {
 	}
     }
 
+    if (rows.length > 0)
+        soundManager.play('lineComplete');
+
     // for each block
     for (i = 0; i < this.blocks.length; i += 1) {
 	curBlock = this.blocks[i];
@@ -169,7 +172,7 @@ Game.prototype.lockBlocks = function() {
     } else if (tSpinType === 'normal') {
 	scoreObject.normalT = true;
     }
-
+    soundManager.play('blockDropped');
     // look for rows
     rows = this.getRows();
     scoreObject.lines = rows.length;
@@ -203,7 +206,8 @@ Game.prototype.resetLockCounter = function (soft) {
  */
 Game.prototype.getResults = function() {
     if (this.gameLost || this.scoreTracker.gameWon()) {
-	return this.scoreTracker.getResults();
+        soundManager.play('gameOver');
+	    return this.scoreTracker.getResults();
     }
     return null;
 };
