@@ -148,15 +148,20 @@ body
 /* panel containing the game and controls */
 .gamePanel
 {
-  width: 601px;
+  width: 500px;
   position: relative;
   margin-left: auto; margin-right: auto;
+}
+.gameElements {
+  float: left;
 }
 
 /* controls table */
 .controlsTitle
 {
   text-align: center;
+  float: right;
+  width: 10px;
 }
 .controlsTableHeader
 {
@@ -165,12 +170,7 @@ body
 }
 .controlsTable
 {
-  margin: 0 auto;
-  text-align: center;
-  border-collapse: collapse;
-  border: 1px solid @border-color;
-  color: @border-color;
-  background-color: @background-color;
+  width: 100%;
 }
 .controlsTable td
 {

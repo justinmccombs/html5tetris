@@ -45,7 +45,7 @@
 <body>
 
 <div class="container contentCell">
-	<div class="col-xs-12">
+	<div class="col-xs-7">
 		<div class="gamePanel">
 
 			<div class="gameElements">
@@ -60,38 +60,49 @@
 
 				<canvas class="gameCanvas" id="gameCanvas" width="600" height="500" onclick="onClickEvent(event)" class="gameCanvas">Your browser does not natively support Html5, or the Canvas Tag. Using this browser is slowing the progress of the web. Please get a modern browser, such as Google Chrome or Mozzila FireFox</canvas>
 			</div>
-			<div class="controlsTitle">
-				<br/>
-				<b>Controls:</b><br/>
-				<table border="1" cellpadding="3" class="controlsTable">
-					<tr>
-						<td colspan="3">
-							<button id="upLevelButton">Level Up</button>
-						</td>
-						<td colspan="3">
-							<button id="downLevelButton">Level Down</button>
-						</td>
-					</tr>
-					<tr class="controlsTableHeader">
-						<td width="80">Move Block</td>
-						<td width="80">Soft Drop</td>
-						<td width="80">Rotate</td>
-						<td width="80">Save Piece</td>
-						<td width="80">Hard Drop</td>
-						<td width="80">Pause</td>
-					</tr>
-					<tr>
-						<td><span id="shiftLeft">Left</span>, <span id="shiftRight">Right</span></td>
-						<td><span id="softDrop">Down</span></td>
-						<td><span id="rotateLeft">Z</span>, <span id="rotateRight">X, Up</span></td>
-						<td><span id="swap">C, Shift</span></td>
-						<td><span id="hardDrop">Space</span></td>
-						<td>Esc</td>
-					</tr>
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="controlsTitle">
+			<br/>
+			<b>Controls:</b><br/>
+			<table border="1" cellpadding="3" class="controlsTable">
+				<tr>
+					<td colspan="2">
+						<button class="btn" id="upLevelButton">Level Up</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button class="btn" id="downLevelButton">Level Down</button>
+					</td>
+				</tr>
+				<tr class="controlsTableHeader">
+					<td>Move Block</td>
+					<td><span id="shiftLeft">Left</span>, <span id="shiftRight">Right</span></td>
+				</tr>
+				<tr class="controlsTableHeader">
+					<td>Soft Drop</td>
+					<td><span id="softDrop">Down</span></td>
+				</tr>
+				<tr class="controlsTableHeader">
+					<td>Rotate</td>
+					<td><span id="rotateLeft">Z</span>, <span id="rotateRight">X, Up</span></td>
+				</tr>
+				<tr class="controlsTableHeader">
+					<td>Save Piece</td>
+					<td><span id="swap">C, Shift</span></td>
+				</tr>
+				<tr class="controlsTableHeader">
+					<td>Hard Drop</td>
+					<td><span id="hardDrop">Space</span></td>
+				</tr>
+				<tr class="controlsTableHeader">
+					<td>Pause</td>
+					<td>Esc</td>
+				</tr>
 
-				</table>
-			</div>
-
+			</table>
 		</div>
 	</div>
 </div>
